@@ -1,0 +1,30 @@
+/* 예시 */
+/* 테이블의 이름을 변경하기 */
+alter table grad_info_csv rename to grad_info;
+alter table grad_history_csv rename to grad_history;
+
+/* 모든 column을 불러오기 */
+select * from grad_info;
+
+/* 다양한 table 내 column으로부터 불러오기 */
+select 성별, 입학년도, count(입학년도)
+	from grad_info
+	group by 입학년도, 성별;
+	
+select 과정구분, 성별, 입학년도, count(입학년도) as 입학년도
+	from grad_info
+	group by 입학년도, 성별;
+	
+select * from grad_history;
+
+select 년도, count(과목개설대학명) as 개설횟수
+	from grad_history
+	group by 년도
+	order by 개설횟수 desc;
+	
+select * from grad_history;
+
+select 년도, 과목개설대학명, count(과목개설대학명) as 개설횟수
+	from grad_history
+	group by 과목개설대학명, 년도;
+	
