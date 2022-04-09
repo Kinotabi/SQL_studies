@@ -3,7 +3,7 @@ SQL 연습을 위한 repository
 
 기초적인 SQL 문법부터 반복해서 배우고 실험해보기
 
-※ NOSQL 기반
+※ SQLite 기반
 * 각각의 예시 데이터세트
 * 1. PISA 데이터세트
     - output_cluster : 국제학업성취도 자료인 PISA를 가공하여 학생들을 ICT 사용 수준과 ICT 사용 환경이 좋은 정도로 두 축을 구성해
