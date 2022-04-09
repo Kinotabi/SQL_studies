@@ -9,24 +9,24 @@ SQL 연습을 위한 repository
     - output_cluster : 국제학업성취도 자료인 PISA를 가공하여 학생들을 ICT 사용 수준과 ICT 사용 환경이 좋은 정도로 두 축을 구성해
                        만든 예제 테이블
                        
-                       CNTRYID : 국가 고유 번호, VARCHAR
-                       CNT	: 국가 이니셜 3글자, VARCHAR
-                       CNTSCHID	: 학교 고유 번호, VARCHAR
-                       CNTSTUID	: 학생 고유 번호, VARCHAR primary_key
+                       CNTRYID : 국가 고유 번호, VARCHAR FK
+                       CNT	: 국가 이니셜 3글자, VARCHAR FK
+                       CNTSCHID	: 학교 고유 번호, VARCHAR FK
+                       CNTSTUID	: 학생 고유 번호, VARCHAR PK
                        ICTENV	: 학생의 ICT 사용 수준. 값이 클수록 사용을 많이 함. INT
                        ICTUSE	: 학생이 속한 환경 내에서 ICT 기술 사용이 자유로운 정도 (예: 컴퓨터가 많은가? 태블릿을 갖고 있는가?), INT
                        cluster : 클러스터링된 결과. 0과 1로 나뉘어 있음. VARCHAR
                        
     - ict_test_countries : 위 데이터세트에서 일부 국가들만 선정하여 ICT와 관련된 변수들을 선별한 테이블
  
-                           CNTRYID : 국가 고유 번호, VARCHAR
-                           CNT	: 국가 이니셜 3글자, VARCHAR
-                           CNTSCHID	: 학교 고유 번호, VARCHAR
-                           CNTSTUID	: 학생 고유 번호, VARCHAR primary_key
+                           CNTRYID : 국가 고유 번호, VARCHAR FK
+                           CNT	: 국가 이니셜 3글자, VARCHAR FK
+                           CNTSCHID	: 학교 고유 번호, VARCHAR FK
+                           CNTSTUID	: 학생 고유 번호, VARCHAR PK
                            OECD	: OECD 국가 여부, 0은 아니오, 1은 예, VARCHAR
                            ENTUSE	: 엔터테인먼트 목적의 ICT 사용 수준. 값이 높을 수록 높음. INT
                            HOMESCH : 집 안에서의 ICT 사용 수준. 갚이 높을 수록 높음. INT
-                           USESCH	: 학교 내에서의 ICT 사용 수준. 값이 높을 수록 높음. INT
+                           USESCH   : 학교 내에서의 ICT 사용 수준. 값이 높을 수록 높음. INT
                            INTICT	: ICT에 대한 학생의 흥미 수준. 값이 높을 수록 높음. INT
                            COMPICT : ICT에 대한 학생의 역량 수준. 값이 높을 수록 높음. INT
                            AUTICT	: 응답자 본인이 생각하기에 ICT를 얼마나 다룰 수 있는지. 값이 높을 수록 높음. INT
